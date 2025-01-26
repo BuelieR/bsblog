@@ -1,0 +1,26 @@
+{
+    "admin": {
+        "username": "admin",
+        "password": "31200a6cdad17227e91f80a449854d093c15e6394f2c3f4c742b4856531b344426cd2f547db3b528fb90b4b0ef05b0b1ab98af08ff35de0be2c49395041dd1b8"
+    },
+    "fbdbcb57-d5c0-4503-9f9d-1332cdc7b73c": {
+        "username": "buelie",
+        "password": "1d1198f79dcc690101be036cf2ccb34c4bc353812f1322d109b38f7224680377e03a4a3101c8db0e51a4e21ff43cafd76adbf698b3d1953e98d295091808a9d1"
+    },
+    "a0c27af7-187b-4650-bbb6-4e892a32faac": {
+        "username": "BueeLiu",
+        "password": "beb8b54fc7013617f7ce020aca15620d84a269da134c15c5de8a4dbf138fe2f0efc0630bd58caafd694432d1b10c2f8401f658549686c57ee31536ff5f24f19e"
+    },
+    "5d35b2bc-588b-4ecf-876d-f6eb1d877cb4": {
+        "username": "luo",
+        "password": "d9e6762dd1c8eaf6d61b3c6192fc408d4d6d5f1176d0c29169bc24e71c3f274ad27fcd5811b313d681f7e55ec02d73d499c95455b6b5bb503acf574fba8ffe85"
+    },
+    "2c776fca-02d4-4c8f-bb22-6e5db4a7be38": {
+        "username": "yilin",
+        "password": "e7331cece884e3ec99f05a1c33f2b59510d1d4c01ec3435d87e149d499da497ae2e23f9a3304e96d40abdb74d6c81320456a427fb242beb7bafffdf51b322792"
+    },
+    "11e3719b-38f2-4784-a283-e06fc7e49333": {
+        "username": "1",
+        "password": "d5f08c4782231e67d86002bd4037ccd8d02c9de9bb011bd5666b71f3dbbd1e19d4478ec0345d0853d770e0b32127f686b38bc28a1d576371cf714d74d38bd171"
+    }
+}
