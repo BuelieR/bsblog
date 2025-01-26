@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>编辑文章</h2>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var contentInput = document.getElementById('content');
+    var previewDiv = document.getElementById('preview');
+
+    function updatePreview() {
+        // 启用 marked 的所有扩展
+        var md = marked.parse(contentInput.value, { gfm: true, tables: true, breaks: true, pedantic: false, sanitize: false, smartLists: true, smartypants: false });
+        previewDiv.innerHTML = md;
+    }
+
+    contentInput.addEventListener('input', updatePreview);
+    contentInput.addEventListener('change', updatePreview);
+    updatePreview();  // 初始化预览
+});
+</script>
+<form method="post" class="form-group">
+    <label for="title">标题:</label>
+    <input type="text" id="title" name="title" value="{{ post.title if post else '' }}" required>
+    <label for="content">内容 (最多90000字):</label>
+    <textarea id="content" name="content" required maxlength="90000">{{ post.content if post else '' }}</textarea>
+    <div id="preview" class="markdown-body" style="white-space: pre-wrap;"></div>
+    <label for="category">类别:</label>
+    <input type="text" id="category" name="category" value="{{ post.category if post else '' }}" required>
+    <button type="submit" class="btn">保存</button>
+</form>
+{% endblock %}

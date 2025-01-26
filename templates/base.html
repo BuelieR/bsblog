@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>八三博客</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<header>
+    <h1>八三博客</h1>
+</header>
+<nav>
+    <a href="{{ url_for('index') }}">首页</a>
+    {% if is_logged_in() %}
+        {% if is_admin() %}
+            <a href="{{ url_for('admin_dashboard') }}">管理员面板</a>
+        {% else %}
+            <a href="{{ url_for('user_dashboard') }}">用户面板</a>
+        {% endif %}
+        <a href="{{ url_for('logout') }}">退出登录</a>
+    {% else %}
+        <a href="{{ url_for('login') }}">登录</a>
+        <a href="{{ url_for('register') }}">注册</a>
+    {% endif %}
+</nav>
+<div class="container">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    {% block content %}
+    {% endblock %}
+</div>
+</body>
+</html>

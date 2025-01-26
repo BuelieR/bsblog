@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>搜索文章</h2>
+<div class="search-container">
+    <form method="post" action="{{ url_for('search') }}" class="form-group">
+        <label for="query">搜索:</label>
+        <input type="text" id="query" name="query" required>
+        <button type="submit" class="btn">搜索</button>
+    </form>
+</div>
+{% endblock %}

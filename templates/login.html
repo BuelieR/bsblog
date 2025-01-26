@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="login-register-container">
+    <h2>登录</h2>
+    <form method="post" class="form-group">
+        <label for="username">用户名:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">密码:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit" class="btn">登录</button>
+    </form>
+</div>
+{% endblock %}
