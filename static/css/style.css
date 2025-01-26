@@ -1,0 +1,361 @@
+body {
+    background-color: #161b22;
+    color: #c9d1d9;
+    font-family: 'Microsoft YaHei', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    background-color: #1e2127;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    background-color: #4b0082;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    background-color: #4527a0; /* 更深的紫色 */
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #ff9a9e; /* 保持浅色但不使用红色或粉色 */
+}
+
+.btn {
+    background-color: #6200ea; /* 使用更深的紫色 */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px 0;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #4527a0; /* 更深的紫色 */
+}
+
+.alert {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #30363d;
+}
+
+.alert-success {
+    background-color: #28a745;
+    color: white;
+    border: 1px solid #218838;
+}
+
+.alert-danger {
+    background-color: #d32f2f; /* 使用红色调但不使用红色、粉色、粉紫色 */
+    color: white;
+    border: 1px solid #c62828;
+}
+
+.post {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #1f2428;
+    border: 1px solid #30363d;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.post:hover {
+    background-color: #30363d;
+}
+
+.approved {
+    background-color: #424242;
+}
+
+.approval-btn {
+    background-color: #388e3c; /* 使用更深的绿色 */
+}
+
+.approval-btn:hover {
+    background-color: #2e7d32; /* 更深的绿色 */
+}
+
+.user-dashboard {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #1f2428;
+    border: 1px solid #30363d;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #c9d1d9;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #30363d;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background-color: #1f2428;
+    color: #c9d1d9;
+}
+
+.form-group textarea {
+    height: 200px; /* 增加文本框大小 */
+}
+
+.login-register-container {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #1e2127;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 加入一些现代化的表单样式 */
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #4527a0; /* 更深的紫色 */
+    box-shadow: 0 0 5px rgba(75, 0, 129, 0.5);
+}
+
+/* 移动设备适配 */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .post {
+        padding: 15px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 8px;
+    }
+
+    .btn {
+        padding: 8px 15px;
+    }
+}
+
+/* 确保用户仪表盘和管理员仪表盘在移动设备上也有良好的显示效果 */
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .post {
+        padding: 10px;
+        margin: 10px 0;
+    }
+
+    .form-group label {
+        font-size: 14px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 6px;
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+
+    header, nav {
+        padding: 10px 0;
+    }
+
+    nav a {
+        margin: 0 10px;
+    }
+}
+
+/* 添加Markdown表格边框样式 */
+.markdown-body table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.markdown-body th,
+.markdown-body td {
+    border: 1px solid #30363d;
+    padding: 6px 13px;
+    text-align: left;
+}
+
+.markdown-body th {
+    background-color: #1f2428;
+}
+
+.markdown-body tr:nth-child(even) {
+    background-color: #30363d;
+}
+
+.markdown-body tr:nth-child(odd) {
+    background-color: #1f2428;
+}
+
+.markdown-body tr:hover {
+    background-color: #4527a0;
+}
+
+.markdown-body th,
+.markdown-body td {
+    padding: 6px 13px;
+}
+
+.markdown-body th {
+    background-color: #1f2428;
+    color: #c9d1d9;
+}
+
+.markdown-body blockquote {
+    border-left: 4px solid #30363d;
+    padding: 0 15px;
+    color: #c9d1d9;
+    background-color: #1f2428;
+}
+
+.markdown-body code {
+    background-color: #30363d;
+    color: #c9d1d9;
+    padding: 2px 4px;
+    border-radius: 5px;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 85%;
+}
+
+.markdown-body pre {
+    background-color: #30363d;
+    color: #c9d1d9;
+    padding: 16px;
+    border-radius: 5px;
+    overflow: auto;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body a {
+    color: #58a6ff;
+    text-decoration: none;
+}
+
+.markdown-body a:hover {
+    text-decoration: underline;
+}
+
+.markdown-body img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+    border-radius: 5px;
+    display: block;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+    margin: 0 0 15px;
+    padding: 0 0 0 20px;
+}
+
+.markdown-body li {
+    margin: 0;
+    padding: 0;
+}
+
+/* 搜索框样式 */
+.search-form {
+    margin-bottom: 20px;
+}
+
+.search-form input[type="text"] {
+    padding: 10px;
+    border: 1px solid #30363d;
+    border-radius: 5px;
+    background-color: #1f2428;
+    color: #c9d1d9;
+    width: 300px;
+    margin-right: 10px;
+}
+
+.search-form button {
+    padding: 10px 20px;
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    background-color: #4527a0;
+}
+
+/* 分类筛选样式 */
+.category-filter {
+    margin-bottom: 20px;
+}
+
+.category-filter .btn {
+    margin: 5px;
+    padding: 8px 15px;
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.category-filter .btn.active {
+    background-color: #4527a0;
+}
+
+.category-filter .btn:hover {
+    background-color: #4527a0;
+}
